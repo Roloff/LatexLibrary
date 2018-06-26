@@ -1,0 +1,65 @@
+\documentclass{article}
+
+
+\usepackage{xargs} % for "\newcommandx"
+\usepackage[table]{xcolor} % for "\cellcolor"
+
+\usepackage{times} % not necessary, just to the document looks nice
+
+
+\begin{document}
+
+\section{A Simple Schedule}
+
+\begin{enumerate}
+	\item \label{label01} Some task description
+	\item \label{label02} Another task description
+	\item \label{label03} A task description again
+	\item \label{label04} And again
+	\item \label{label05} And again
+	\item \label{label06} And again
+	\item \label{label07} And again
+	\item \label{label08} And again
+	\item \label{label09} And again
+	\item \label{label10} And again
+	\item \label{label11} And we are done
+\end{enumerate}
+
+
+
+\newcommandx{\X}{\cellcolor{black}}
+
+\begin{table}[!htbp]
+	\centering
+		\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		&\multicolumn{10}{c|}{2018}&\multicolumn{4}{c|}{2019}\\
+		\hline
+		&\tiny{\textbf{MAR}}&\tiny{\textbf{ABR}}&\tiny{\textbf{MAI}}&\tiny{\textbf{JUN}}&\tiny{\textbf{JUL}}&\tiny{\textbf{AGO}}&\tiny{\textbf{SET}}&\tiny{\textbf{OUT}}&\tiny{\textbf{NOV}}&\tiny{\textbf{DEZ}}&\tiny{\textbf{JAN}}&\tiny{\textbf{FEV}}&\tiny{\textbf{MAR}}&\tiny{\textbf{ABR}}\\
+		\hline \hline
+		\ref{label01} &\X&&&&&&&&&&&&&\\
+		\hline
+		\ref{label02}&&\X&\X&\X&\X&&&&&&&&&\\
+		\hline	
+		\ref{label03}&\X&\X&\X&&&&&&&&&&&\\
+		\hline			
+		\ref{label04}&&&\X&\X&&&&&&&&&&\\
+		\hline
+		\ref{label05}&&&&\X&\X&&&&&&&&&\\
+		\hline	
+		\ref{label06}&&&&\X&\X&&&&&&&&&\\
+		\hline	
+		\ref{label07}&&&&&\X&\X&\X&\X&&&&&&\\
+		\hline	
+		\ref{label08}&&&&&&&&\X&\X&\X&&&&\\
+		\hline	
+		\ref{label09}&&&&&&&&&&\X&\X&\X&&\\
+		\hline	
+		\ref{label10}&&&&&&&&&&\X&\X&\X&\X&\\
+		\hline
+		\ref{label11}&&&&&&&&&&&&&&\X\\
+		\hline	
+		\end{tabular}
+\end{table}
+
+\end{document}
