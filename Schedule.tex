@@ -1,11 +1,9 @@
 \documentclass{article}
 
+\usepackage{xargs} 		% for "\newcommandx"
+\usepackage[table]{xcolor} 	% for "\cellcolor"
 
-\usepackage{xargs} % for "\newcommandx"
-\usepackage[table]{xcolor} % for "\cellcolor"
-
-\usepackage{times} % not necessary, just to the document looks nice
-
+\usepackage{times} 		% not necessary, just to the document looks nice
 
 \begin{document}
 
@@ -24,8 +22,6 @@
 	\item \label{label10} And again
 	\item \label{label11} And we are done
 \end{enumerate}
-
-
 
 \newcommandx{\X}{\cellcolor{black}}
 
