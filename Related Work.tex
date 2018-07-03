@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage{tabularx} 		% for "tabularx" section
+\usepackage[table]{xcolor} 	% for "\cellcolor"
+\usepackage{booktabs}		% for the "\toprule" and "\bottomrule" commands
+\usepackage{amssymb} 		% for the "\checkmark"
+\usepackage{graphicx}		% for the "\rotatebox" command
+
+\usepackage{times}			% to use Adobe Times font (not mandatory)
+
+\begin{document}
+
+\section{A Simple Related Work Table}
+
+\begin{table}[!htbp]
+	\centering
+
+	\footnotesize
+
+	\newcommand\cm{\checkmark}
+
+	\definecolor{RWGray}{gray}{0.85}
+
+	\begin{tabularx}{\linewidth}{p{7cm}>{\columncolor{RWGray}}XX>{\columncolor{RWGray}}XX>{\columncolor{RWGray}}XX}
+		\toprule	
+																	&
+		\rotatebox[origin=l]{90}{A feature of your work}			&
+		\rotatebox[origin=l]{90}{Another one} 						&
+		\rotatebox[origin=l]{90}{A nice feature} 					&
+		\rotatebox[origin=l]{90}{A better one} 						&
+		\rotatebox[origin=l]{90}{A really big feature description} 	&
+		\rotatebox[origin=l]{90}{The last feature}					\\
+
+		\hline
+		Some Related Work	& \cm 	&       &		&		& \cm 	& 		\\
+		\hline
+		Some Related Work	& \cm   &       &		&       & \cm   &       \\
+		\hline
+		Some Related Work	& \cm   &       &       &       & \cm   &       \\
+		\hline
+		Some Related Work	& \cm   &       &       &       & \cm   &       \\
+		\hline
+		Some Related Work	&       & \cm   &       & \cm   & \cm   & \cm   \\
+		\hline
+		Some Related Work	& \cm   & \cm   & \cm   &    	&   	& \cm   \\
+		\hline
+		Your Work			& \cm   & \cm   & \cm   & \cm   & \cm   & \cm   \\
+	\bottomrule
+	\end{tabularx}
+	\caption{State of the Art Table.}
+	\label{tbl:state-of-art}
+\end{table}
+
+\end{document}
